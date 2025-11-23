@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beanology — Кофейня</title>
+  <meta name="description" content="Beanology — современная кофейня в центре города. Авторский кофе, уютная атмосфера и свежая выпечка. Забронируйте столик онлайн." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Логотип Beanology" class="logo" />
+        <div class="brand-text">
+          <h1 class="site-title">Beanology</h1>
+          <p class="site-sub">Искусство кофе</p>
+        </div>
+      </div>
+
+      <nav class="nav-wrapper" aria-label="Главная навигация">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Открыть меню">
+          <span class="hamburger">☰</span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#booking">Бронирование</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h2 class="hero-title">Наслаждайся вкусом и уютом</h2>
+          <p class="hero-lead">Качественный кофе, авторские рецепты и приятная атмосфера в самом сердце города.</p>
+          <div class="hero-cta">
+            <a href="#menu" class="btn">Посмотреть меню</a>
+            <a href="#booking" class="btn ghost">Забронировать столик</a>
+          </div>
+        </div>
+        <div class="hero-right" aria-hidden="true">
+          <img src="images/hero-coffee.jpg" alt="" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h3 class="section-title">О нас</h3>
+      <p class="section-lead">Мы открылись в 2019 году и варим кофе с душой. Наши зерна отобраны вручную, а бариста — настоящие мастера своего дела.</p>
+      <div class="features-grid">
+        <div class="feature">
+          <h4>Качество</h4>
+          <p>Только свежие зерна спешелти сортов и точная обжарка.</p>
+        </div>
+        <div class="feature">
+          <h4>Атмосфера</h4>
+          <p>Тепло и уют — идеальное место для встреч или спокойной работы.</p>
+        </div>
+        <div class="feature">
+          <h4>Мастерство</h4>
+          <p>Каждый напиток — маленькое произведение искусства от наших бариста.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section container">
+      <h3 class="section-title">Популярное в меню</h3>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <img src="images/espresso.jpg" alt="Чашка эспрессо" class="menu-img">
+          <h4>Эспрессо</h4>
+          <p class="price">₸600</p>
+        </article>
+        <article class="menu-card">
+          <img src="images/cappuccino.jpg" alt="Чашка капучино с латте-арт" class="menu-img">
+          <h4>Капучино</h4>
+          <p class="price">₸900</p>
+        </article>
+        <article class="menu-card">
+          <img src="images/latte.jpg" alt="Высокий стакан латте" class="menu-img">
+          <h4>Латте</h4>
+          <p class="price">₸1000</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="booking" class="section container">
+      <h3 class="section-title">Забронировать столик</h3>
+      <form id="bookingForm" class="form grid-form">
+        <div class="form-group">
+          <label for="name" class="visually-hidden">Ваше имя</label>
+          <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="tel" class="visually-hidden">Телефон</label>
+          <input id="tel" name="tel" type="tel" placeholder="Телефон" required>
+        </div>
+
+        <div class="form-group">
+           <label for="date" class="visually-hidden">Дата бронирования</label>
+           <input id="date" name="date" type="date" required aria-label="Дата">
+        </div>
+
+        <div class="form-group">
+          <label for="time" class="visually-hidden">Время бронирования</label>
+          <input id="time" name="time" type="time" required aria-label="Время">
+        </div>
+
+        <div class="form-group">
+          <label for="people" class="visually-hidden">Количество гостей</label>
+          <select id="people" name="people" required>
+            <option value="">Кол-во гостей</option>
+            <option value="1">1 человек</option>
+            <option value="2">2 человека</option>
+            <option value="3">3 человека</option>
+            <option value="4">4 человека</option>
+            <option value="5+">Более 4-х</option>
+          </select>
+        </div>
+        
+        <button class="btn form-submit-btn" type="submit">Забронировать</button>
+      </form>
+
+      <div id="bookingSuccess" class="notice" hidden role="alert">✅ Бронирование принято — мы свяжемся для подтверждения.</div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h3 class="section-title">Контакты</h3>
+      <p class="muted">📍 Актау, ул. Кофейная 5 · ⏰ Ежедневно 08:00–22:00</p>
+      <ul class="contact-list">
+        <li><a href="tel:+77005553322">📞 +7 700 555 33 22</a></li>
+        <li><a href="mailto:ramazan.toktav@gmail.com">✉️ ramazan.toktav@gmail.com</a></li>
+        <li><a href="https://t.me/WHOD1E" target="_blank" rel="noopener">✈️ Telegram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Beanology · Все права защищены</p>
+      <p class="muted">Design & Dev by RTG</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
